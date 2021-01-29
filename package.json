@@ -1,0 +1,15 @@
+{
+  "name": "docker-nginx-spa",
+  "version": "0.0.0",
+  "description": "Servering SPA web app.",
+  "main": "index.js",
+  "scripts": {
+    "release": "standard-version && git push --follow-tags origin master",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zzswang",
+  "license": "MIT",
+  "devDependencies": {
+    "standard-version": "^9.1.0"
+  }
+}
