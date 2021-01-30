@@ -1,6 +1,6 @@
 {
   "name": "docker-nginx-spa",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Servering SPA web app.",
   "main": "index.js",
   "scripts": {

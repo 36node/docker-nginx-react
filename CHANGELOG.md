@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.1 (2021-01-30)
+
 ### [0.10.7](https://github.com/zzswang/docker-nginx-react/compare/v0.10.6...v0.10.7) (2020-02-15)
 
 
