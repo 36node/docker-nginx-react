@@ -1,4 +1,4 @@
-FROM 36node/docker-nginx-spa:latest
+FROM 36node/nginx-spa:latest
 
 ARG VERSION
 
