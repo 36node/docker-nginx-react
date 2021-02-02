@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/36node/docker-nginx-spa/compare/v0.0.1...v0.0.2) (2021-02-02)
+
+
+### Bug Fixes
+
+* APP_BASE_PATH to APP_BASENAME ([0e29234](https://github.com/36node/docker-nginx-spa/commit/0e29234ef88e75f1235ad58d30b8db659a9e7b2a))
+
 ### 0.0.1 (2021-01-30)
 
 ### [0.10.7](https://github.com/zzswang/docker-nginx-react/compare/v0.10.6...v0.10.7) (2020-02-15)
