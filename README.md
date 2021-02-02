@@ -75,7 +75,7 @@ This image has following preset env.
 * APP_VERSION: App version.
 * APP_WORKDIR: the root direactory of your app running in the docker container,
   usally you do not need to change it.
-* APP_BASE_PATH: some times you would want to put several sites under one
+* APP_BASENAME: some times you would want to put several sites under one
   domain, then sub path prefix is required.
 * API_GATEWAY & API_PLACEHOLDER: An api call start with a specific path, then the container
   will proxy the request to API_GATEWAY. 
@@ -103,7 +103,7 @@ notice that the `/api/v1` is stripped.
 
 In case you need more gateway, you can use another 5 entries API_GATEWAY_1 ~ API_GATEWAY_5, along with API_PLACEHOLDER_1 ~ API_PLACEHOLDER_5.
 
-### APP_BASE_PATH
+### APP_BASENAME
 
 Suppose you have a domain
 
@@ -121,7 +121,7 @@ http://www.books.com/math
 For App computer, setting
 
 ```sh
-APP_BASE_PATH=/computer
+APP_BASENAME=/computer
 ```
 
 You also need to take care about this path prefix in your APP. Like react
@@ -134,7 +134,7 @@ import useBasename from "history/lib/useBasename";
 import { browserHistory } from "react-router";
 
 export const myHistory = useBasename(() => browserHistory)({
-  basename: `/${APP_BASE_PATH}`
+  basename: `/${APP_BASENAME}`
 });
 ```
 
