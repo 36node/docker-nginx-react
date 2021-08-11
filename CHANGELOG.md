@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/36node/docker-nginx-react/compare/v0.1.1...v0.1.2) (2021-08-11)
+
+
+### Features
+
+* runtime env ([edd6969](https://github.com/36node/docker-nginx-react/commit/edd69698781039af4cad7e349e86c9455d148103))
+
 ### [0.1.1](https://github.com/36node/docker-nginx-react/compare/v0.1.0...v0.1.1) (2021-08-11)
 
 ## [0.1.0](https://github.com/36node/docker-nginx-react/compare/v0.0.5...v0.1.0) (2021-08-11)
