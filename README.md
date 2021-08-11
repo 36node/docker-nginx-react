@@ -72,6 +72,7 @@ This image has following preset env.
 
 * BUILD: Image build time.
 * DEBUG: Debug envrionment.
+* ENV_PREFIX: All env start with this prefix will be used for subst. See [Runtime env](#runtime-env) section.
 * APP_VERSION: App version.
 * APP_WORKDIR: the root direactory of your app running in the docker container,
   usally you do not need to change it.
