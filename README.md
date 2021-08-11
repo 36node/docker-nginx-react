@@ -25,7 +25,9 @@ docker run -d --name myapp -p 3000:80 -v /your/webapp:/app 36node/nginx-spa
 ```sh
 FROM 36node/nginx-spa:latest
 
-ENV DEBUG=off
+ENV DEBUG=off \
+    ENV_PREFIX=APP_ \
+    NODE_ENV=production
 
 ## Suppose your app is in the dist directory.
 COPY ./dist /app
