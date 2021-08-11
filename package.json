@@ -4,7 +4,7 @@
   "description": "Servering SPA web app.",
   "main": "index.js",
   "scripts": {
-    "release": "standard-version && git push --follow-tags origin main",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zzswang",
