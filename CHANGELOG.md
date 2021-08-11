@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/36node/docker-nginx-react/compare/v0.0.2...v0.0.3) (2021-08-11)
+
+
+### Features
+
+* env_prefix ([5bd8baa](https://github.com/36node/docker-nginx-react/commit/5bd8baac924563c473789cbded8411bfdd82ae37))
+
 ### [0.0.2](https://github.com/36node/docker-nginx-spa/compare/v0.0.1...v0.0.2) (2021-02-02)
 
 
