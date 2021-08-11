@@ -3,6 +3,7 @@
 echo "setting nginx conf ..."
 echo "DEBUG": $DEBUG
 echo "BUILD": $BUILD
+echo "ENV_PREFIX": $ENV_PREFIX
 echo "WHITE_LIST": $WHITE_LIST
 echo "WHITE_LIST_IP": $WHITE_LIST_IP
 echo "APP_VERSION": $APP_VERSION
@@ -34,7 +35,7 @@ if [ ${WHITE_LIST} = 'off' ]; then
 fi
 
 ## Subset env
-export SUBS=$(echo $(env | cut -d= -f1 | sed -e 's/^/\$/'))
+export SUBS=$(echo $(env | cut -d= -f1 | grep "^${ENV_PREFIX}" | sed -e 's/^/\$/'))
 echo "inject environments ..."
 echo $SUBS
 for f in `find "$APP_WORKDIR" -regex ".*\.\(js\|css\|html\|json\|map\)"`; do envsubst "$SUBS" < $f > $f.tmp; mv $f.tmp $f; done
