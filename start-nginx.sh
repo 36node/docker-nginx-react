@@ -45,7 +45,7 @@ echo "window._runtime_ = {" >> ./env-runtime.js
 for e in $ENV_SUBS; do
   # Append configuration property to JS file
   eName=$(echo $e | sed -e 's/^\$//');
-  value=$(printf '%s\n' "${!eName}")
+  value=$(printf '%s\n' "${eName}")
   echo "  $eName: \"$value\"," >> ./env-runtime.js
 done
 echo "}" >> ./env-runtime.js
