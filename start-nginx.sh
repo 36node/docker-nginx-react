@@ -37,18 +37,18 @@ fi
 ## inject runtime env into *.html
 ENV_SUBS=$(echo $(env | cut -d= -f1 | grep "^${ENV_PREFIX}" | sed -e 's/^/\$/'))
 echo "inject runtime environments ..."
-### Recreate config file
-rm -rf ./env-config.js
-touch ./env-config.js
+### Recreate env-runtime file
+rm -rf ./env-runtime.js
+touch ./env-runtime.js
 ### Add assignment 
-echo "window._runtime_ = {" >> ./env-config.js
+echo "window._runtime_ = {" >> ./env-runtime.js
 for e in $ENV_SUBS; do
   # Append configuration property to JS file
   eName=$(echo $e | sed -e 's/^\$//');
   value=$(printf '%s\n' "${!eName}")
-  echo "  $eName: \"$value\"," >> ./env-config.js
+  echo "  $eName: \"$value\"," >> ./env-runtime.js
 done
-echo "}" >> ./env-config.js
+echo "}" >> ./env-runtime.js
 sed -i -e 's/<script src=".\/env-runtime.js"><\/script>//g' *.html
 sed -i -e 's/\(<\/head>\)/<script src=".\/env-runtime.js"><\/script>\1/' *.html
 

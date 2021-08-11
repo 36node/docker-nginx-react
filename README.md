@@ -1,4 +1,4 @@
-# nginx-spa
+# nginx-react
 
 A docker base image for a Single Page App (eg. React), within nginx server,
 clear url, push state friendly by default.
@@ -15,7 +15,7 @@ There are two ways to kick off:
 Link your app with this volume `-v /your/webapp:/app`.
 
 ```sh
-docker run -d --name myapp -p 3000:80 -v /your/webapp:/app 36node/nginx-spa
+docker run -d --name myapp -p 3000:80 -v /your/webapp:/app 36node/nginx-react
 ```
 
 ### 2. Dockfile
@@ -23,7 +23,7 @@ docker run -d --name myapp -p 3000:80 -v /your/webapp:/app 36node/nginx-spa
 **Strongly suggest you follow this way**
 
 ```sh
-FROM 36node/nginx-spa:latest
+FROM 36node/nginx-react:latest
 
 ENV DEBUG=off \
     ENV_PREFIX=APP_ \
