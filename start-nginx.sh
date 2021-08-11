@@ -34,11 +34,23 @@ if [ ${WHITE_LIST} = 'off' ]; then
     sed -i '/^[ ]*\#[ ]*BEGIN_CONFIG_WHEN_WHITE_LIST_ON/,/^[ ]*\#[ ]*END_CONFIG_WHEN_WHITE_LIST_ON/{d;};' /etc/nginx/conf.d/default.conf
 fi
 
-## Subset env
-export SUBS=$(echo $(env | cut -d= -f1 | grep "^${ENV_PREFIX}" | sed -e 's/^/\$/'))
-echo "inject environments ..."
-echo $SUBS
-for f in `find "$APP_WORKDIR" -regex ".*\.\(js\|css\|html\|json\|map\)"`; do envsubst "$SUBS" < $f > $f.tmp; mv $f.tmp $f; done
+## inject runtime env into *.html
+ENV_SUBS=$(echo $(env | cut -d= -f1 | grep "^${ENV_PREFIX}" | sed -e 's/^/\$/'))
+echo "inject runtime environments ..."
+### Recreate config file
+rm -rf ./env-config.js
+touch ./env-config.js
+### Add assignment 
+echo "window._runtime_ = {" >> ./env-config.js
+for e in $ENV_SUBS; do
+  # Append configuration property to JS file
+  eName=$(echo $e | sed -e 's/^\$//');
+  value=$(printf '%s\n' "${!eName}")
+  echo "  $eName: \"$value\"," >> ./env-config.js
+done
+echo "}" >> ./env-config.js
+sed -i -e 's/<script src=".\/env-runtime.js"><\/script>//g' *.html
+sed -i -e 's/\(<\/head>\)/<script src=".\/env-runtime.js"><\/script>\1/' *.html
 
 ## Start nginx
 echo "start nginx"

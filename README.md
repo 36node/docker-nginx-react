@@ -44,22 +44,16 @@ Take a look at todoMVC examples for more details.
 
 ## Runtime env
 
-This is a useful feature.
+This is an useful feature.
 
-Some times you will need to start App with different env, here comes the runtime env.
-Just set some environments in your container. It will use envsubst to replace all env placeholder in files ".*\.\(js\|css\|html\|json\|map\)".
+Some times we will need to start App with different env, here comes the runtime env.
+Just set some environments when you start your container.
 
-Take a look at examples/todoMVC/dist/index.html
+Then we can use it via:
 
-```html
-    <script>
-      (function (){
-        console.log("${APP_GREETINGS}");
-      }());
-    </script>
 ```
-
-`${APP_GREETINGS}` will be gracefully replaced with real runtime env when you start the Web App container.
+window?._runtime_?.APP_GREETINGS
+```
 
 Try to build the examples/todoMVC image, and run it with some env.
 
@@ -67,6 +61,7 @@ Try to build the examples/todoMVC image, and run it with some env.
 docker run -e APP_GREETINGS="XXXXXX" -d -p 3000:80 todomvc
 ```
 
+If you don't want to expose all env, just put ENV_PREFIX=APP, then only environments start with APP will be injected in.
 
 ## Environments
 
