@@ -61,7 +61,7 @@ Try to build the examples/todoMVC image, and run it with some env.
 docker run -e APP_GREETINGS="XXXXXX" -d -p 3000:80 todomvc
 ```
 
-If you don't want to expose all env, just put ENV_PREFIX=APP, then only environments start with APP will be injected in.
+If you don't want to expose all env, just put ENV_PREFIX=APP, then only environments that start with APP will be injected in.
 
 ## Environments
 
