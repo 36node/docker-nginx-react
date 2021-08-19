@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/36node/docker-nginx-react/compare/v0.1.6...v0.1.7) (2021-08-19)
+
+
+### Bug Fixes
+
+* put script in body first place ([8cb6ac1](https://github.com/36node/docker-nginx-react/commit/8cb6ac126451acc258da2f77e8d58fea8b363bbc))
+
 ### [0.1.6](https://github.com/36node/docker-nginx-react/compare/v0.1.5...v0.1.6) (2021-08-19)
 
 
