@@ -50,7 +50,7 @@ for e in $ENV_SUBS; do
 done
 echo "}" >> ./env-runtime.js
 sed -i -e 's/<script src=".\/env-runtime.js"><\/script>//g' *.html
-sed -i -e 's/\(<\/head>\)/<script src=".\/env-runtime.js"><\/script>\1/' *.html
+sed -i -e 's/\(<\/head>\)/<script defer src=".\/env-runtime.js"><\/script>\1/' *.html
 
 ## Start nginx
 echo "start nginx"
