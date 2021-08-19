@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/36node/docker-nginx-react/compare/v0.1.5...v0.1.6) (2021-08-19)
+
+
+### Bug Fixes
+
+* add defer on runtime js ([aa7d641](https://github.com/36node/docker-nginx-react/commit/aa7d641b8a2f9d7d20e3997dc4f4904a676bb4ac))
+
 ### [0.1.5](https://github.com/36node/docker-nginx-react/compare/v0.1.4...v0.1.5) (2021-08-11)
 
 
