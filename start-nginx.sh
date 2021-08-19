@@ -49,8 +49,8 @@ for e in $ENV_SUBS; do
   echo "  $eName: \"$value\"," >> ./env-runtime.js
 done
 echo "}" >> ./env-runtime.js
-sed -i -e 's/<script src=".\/env-runtime.js"><\/script>//g' *.html
-sed -i -e 's/<body>/&<script src=".\/env-runtime.js"><\/script>/' *.html
+sed -i -e 's/<script src="\/env-runtime.js"><\/script>//g' *.html
+sed -i -e 's/<body>/&<script src="\/env-runtime.js"><\/script>/' *.html
 
 ## Start nginx
 echo "start nginx"
