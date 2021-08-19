@@ -40,7 +40,7 @@ echo "inject runtime environments ..."
 ### Recreate env-runtime file
 rm -rf ./env-runtime.js
 touch ./env-runtime.js
-### Add assignment 
+### Add assignment
 echo "window._runtime_ = {" >> ./env-runtime.js
 for e in $ENV_SUBS; do
   # Append configuration property to JS file
@@ -50,7 +50,7 @@ for e in $ENV_SUBS; do
 done
 echo "}" >> ./env-runtime.js
 sed -i -e 's/<script src=".\/env-runtime.js"><\/script>//g' *.html
-sed -i -e 's/\(<\/head>\)/<script defer src=".\/env-runtime.js"><\/script>\1/' *.html
+sed -i -e 's/\b<body>\b/&<script src=".\/env-runtime.js"><\/script>/' *.html
 
 ## Start nginx
 echo "start nginx"
