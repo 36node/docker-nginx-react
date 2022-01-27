@@ -97,7 +97,7 @@ API_GATEWAY="http://api.your.domain"
 ```
 
 Then all url match `/api/v1` will redirect to `http://api.your.domain`. Please
-notice that the `/api/v1` is stripped.
+notice that the `/api/v1` will be stripped.
 
 In case you need more gateway, you can use another 5 entries API_GATEWAY_1 ~ API_GATEWAY_5, along with API_PLACEHOLDER_1 ~ API_PLACEHOLDER_5.
 
