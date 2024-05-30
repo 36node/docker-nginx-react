@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/36node/docker-nginx-react/compare/v0.1.10...v0.1.11) (2024-05-30)
+
+
+### Bug Fixes
+
+* env ENV_PREFIX set default value REACT_APP ([0e7eb7b](https://github.com/36node/docker-nginx-react/commit/0e7eb7ba57bab176a133c0f96e5d8defa50215c0))
+
 ### [0.1.10](https://github.com/36node/docker-nginx-react/compare/v0.1.9...v0.1.10) (2022-11-21)
 
 
