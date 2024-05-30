@@ -3,6 +3,7 @@ LABEL maintainer="zzswang@gmail.com"
 
 ENV DEBUG=off \
   BUILD="1997-01-01T00:00:00.000Z" \
+  ENV_PREFIX="REACT_APP" \
   APP_VERSION="v0.0.0" \
   APP_WORKDIR=/app \
   APP_BASENAME=/aSubSiteInParentDomainUseThisPath \
